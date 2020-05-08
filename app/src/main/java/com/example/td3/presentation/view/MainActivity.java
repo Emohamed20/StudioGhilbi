@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.td3.presentation.Constants;
 import com.example.td3.R;
 import com.example.td3.data.StudioApi;
+import com.example.td3.presentation.controller.MainController;
 import com.example.td3.presentation.model.Film;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -39,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapteur mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private SharedPreferences sharedPreferences;
-    private Gson gson;
-    private static final String BASE_URL = "https://ghibliapi.herokuapp.com";
+
+
+    private MainController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,95 +51,16 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        sharedPreferences =getSharedPreferences("application_ghilbi ", Context.MODE_PRIVATE);
-        gson = new GsonBuilder()
-                .setLenient()
-                .create();
+        controller = new MainController(
+                     this,
+                     new GsonBuilder()
+                        .setLenient()
+                        .create(),
+                getSharedPreferences("application_ghilbi ", Context.MODE_PRIVATE)
+        );
+        controller.onStard();
 
-
-    /*
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_VIEW);
-        recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        */
-
-        List<Film> film = getDataFromCache();
-
-        if(film != null){
-            showList(film);
-        } else {
-            makeApiCall();
-        }
     }
-
-    private void makeApiCall() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(client)
-                .build();
-
-        StudioApi studioApi = retrofit.create(StudioApi.class);
-
-        Call<List<Film>> call = studioApi.filmList();
-        Log.d("VINCE", "BEFOR CALLBACK");
-        call.enqueue(new Callback<List<Film>>() {
-            @Override
-            public void onResponse(Call<List<Film>> call, Response<List<Film>> response) {
-                Log.d("VINCE", "INSIDE CALLBACK");
-                if (response.isSuccessful()) {
-                    List<Film> filmList = response.body();
-                    saveList(filmList);
-                    showList(filmList);
-                } else {
-                    showError();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Film>> call, Throwable t) {
-                showError();
-            }
-        });
-        Log.d("VINCE", "AFTER CALLBACK");
-    }
-
-    private void showError() {
-        Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
-    }
-
-
-    private void saveList(List<Film> filmList) {
-        String jsonString=gson.toJson(filmList);//sauvegarder ma liste avec format json
-
-        sharedPreferences
-                .edit()
-                .putString(Constants.KEY_FILM_LIST, jsonString)
-                .apply();
-
-        Toast.makeText(getApplicationContext(), "List saved", Toast.LENGTH_SHORT).show();
-    }
-
-    private List<Film> getDataFromCache() {
-        String jsonFilm = sharedPreferences.getString(Constants.KEY_FILM_LIST, null);
-
-        if(jsonFilm == null){
-            return null;
-        } else {
-            Type listType = new TypeToken<List<Film>>(){}.getType();
-            return gson.fromJson(jsonFilm, listType);
-        }
-    }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -160,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showList(List<Film> filmList) {
+    public void showList(List<Film> filmList) {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_VIEW);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -168,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new ListAdapteur(filmList);
         recyclerView.setAdapter(mAdapter);
+    }
+
+    public void showError() {
+        Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
     }
 
 
