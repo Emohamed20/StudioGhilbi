@@ -1,40 +1,24 @@
 package com.example.td3.presentation.view;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.example.td3.presentation.Constants;
 import com.example.td3.R;
-import com.example.td3.data.StudioApi;
 import com.example.td3.presentation.Singletons;
 import com.example.td3.presentation.controller.MainController;
 import com.example.td3.presentation.model.Film;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
 import android.widget.Toast;
 
-import java.lang.reflect.Type;
 import java.util.List;
-
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -88,7 +72,19 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new ListAdapteur(filmList);
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        mAdapter = new ListAdapteur(filmList, new ListAdapteur.OnItemClickListener() {
+            @Override
+            public void onItemClick(Film item) {
+                controller.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -97,4 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void navigateToDetails(Film film) {
+        Toast.makeText(getApplicationContext(), "TODO NAVIGATE", Toast.LENGTH_SHORT).show();
+    }
 }

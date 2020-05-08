@@ -83,7 +83,7 @@ public class MainController {
     }
 
     public void onItemClick(Film film){
-
+         view.navigateToDetails(film);
     }
 
     public void onButtonAClick(){

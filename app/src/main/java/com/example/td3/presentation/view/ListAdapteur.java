@@ -15,6 +15,14 @@ import java.util.List;
 public class ListAdapteur extends RecyclerView.Adapter<ListAdapteur.ViewHolder> {
 
     private List<Film> values;
+    private OnItemClickListener listener;
+
+
+    //objet listener : OnItemClickListener
+    public interface OnItemClickListener {
+        void onItemClick(Film item);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtHeader;
@@ -39,12 +47,11 @@ public class ListAdapteur extends RecyclerView.Adapter<ListAdapteur.ViewHolder> 
         notifyItemRemoved(position);
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapteur(List<Film> myDataset) {
-        values = myDataset;
+    public ListAdapteur(List<Film> myDataset, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.listener = listener;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ListAdapteur.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
@@ -58,21 +65,17 @@ public class ListAdapteur extends RecyclerView.Adapter<ListAdapteur.ViewHolder> 
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        final Film name = values.get(position);
-        holder.txtHeader.setText(name.getTitre());
-        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                remove(position);
+        final Film currentStudio = values.get(position);
+        holder.txtHeader.setText(currentStudio.getTitre());//ce qui appel le titre
+        holder.txtFooter.setText("Titre: " + currentStudio);//ce qui appelle la deuxieme ligne
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                listener.onItemClick(currentStudio);
             }
         });
-
-        holder.txtFooter.setText("Titre: " + name);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
