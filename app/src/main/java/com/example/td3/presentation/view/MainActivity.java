@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.td3.presentation.Constants;
 import com.example.td3.R;
 import com.example.td3.data.StudioApi;
+import com.example.td3.presentation.Singletons;
 import com.example.td3.presentation.controller.MainController;
 import com.example.td3.presentation.model.Film;
 import com.google.gson.Gson;
@@ -53,10 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(
                      this,
-                     new GsonBuilder()
-                        .setLenient()
-                        .create(),
-                getSharedPreferences("application_ghilbi ", Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getSharedPreferences(getApplicationContext())
+
         );
         controller.onStard();
 

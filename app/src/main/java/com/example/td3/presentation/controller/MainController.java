@@ -1,28 +1,21 @@
 package com.example.td3.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.td3.data.StudioApi;
 import com.example.td3.presentation.Constants;
+import com.example.td3.presentation.Singletons;
 import com.example.td3.presentation.model.Film;
 import com.example.td3.presentation.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainController {
 
@@ -46,19 +39,7 @@ public class MainController {
         }
     }
     private void makeApiCall() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(client)
-                .build();
-
-        StudioApi studioApi = retrofit.create(StudioApi.class);
-
-        Call<List<Film>> call = studioApi.filmList();
+        Call<List<Film>> call = Singletons.getStudioApi().filmList();
         Log.d("VINCE", "BEFOR CALLBACK");
         call.enqueue(new Callback<List<Film>>() {
             @Override
