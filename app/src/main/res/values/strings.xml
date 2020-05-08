@@ -7,4 +7,6 @@
     <string name="action_settings">action_settings</string>
     <string name="first_fragment_label">first_fragment_label</string>
     <string name="second_fragment_label">second_fragment_label</string>
+    <string name="detail_txt_description">Ecran Detail</string>
+    <string name="detail_text_description">Ecran Detail</string>
 </resources>

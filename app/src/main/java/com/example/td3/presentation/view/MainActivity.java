@@ -1,5 +1,6 @@
 package com.example.td3.presentation.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.td3.R;
@@ -94,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void navigateToDetails(Film film) {
-        Toast.makeText(getApplicationContext(), "TODO NAVIGATE", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
+        myIntent.putExtra("StudioKeyTitre", Singletons.getGson().toJson(film));
+        //myIntent.putExtra("StudioKeyDate", film.getDate_sortie());
+
+        MainActivity.this.startActivity(myIntent);
+
     }
 }
