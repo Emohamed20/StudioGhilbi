@@ -1,5 +1,0 @@
-#essayage
-
-
-
-introduction to git
