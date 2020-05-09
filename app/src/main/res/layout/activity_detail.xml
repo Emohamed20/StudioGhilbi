@@ -10,10 +10,104 @@
     <TextView
         android:id="@+id/derail_txt"
         android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:text="@string/detail_text_description"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+    android:id="@+id/detailAnnee"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:text="@string/detail_annee_description"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.321"
+    tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailDescription"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/detail_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailProducer"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/detail_producer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailDirector"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/detail_director"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailScore"
+        android:layout_width="205dp"
+        android:layout_height="41dp"
+        android:text="@string/detail_score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailUrl"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:text="@string/detail_url"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailId"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:text="@string/detail_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

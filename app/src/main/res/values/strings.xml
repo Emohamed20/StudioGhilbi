@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Studio Ghilbi</string>
-    <string name="hello_first_fragment">hello_first_fragment</string>
+    <string name="hello_first_fragment">Répertoire des films Studio GHIBLI</string>
     <string name="next">next</string>
     <string name="previous">CAVA</string>
     <string name="action_settings">action_settings</string>
@@ -9,4 +9,12 @@
     <string name="second_fragment_label">second_fragment_label</string>
     <string name="detail_txt_description">Ecran Detail</string>
     <string name="detail_text_description">Ecran Detail</string>
+    <string name="detail_annee_description">Ecran_annne</string>
+    <string name="detail_description">description</string>
+    <string name="detail_director">director</string>
+    <string name="detail_producer">producer</string>
+    <string name="detail_score">score</string>
+    <string name="detail_url">url</string>
+    <string name="detail_id">id</string>
+    <string name="detail_vehicule">vehicule</string>
 </resources>

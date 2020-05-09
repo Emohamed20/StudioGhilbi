@@ -97,7 +97,9 @@ public class MainActivity extends AppCompatActivity {
     public void navigateToDetails(Film film) {
         Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
         myIntent.putExtra("StudioKeyTitre", Singletons.getGson().toJson(film));
-        //myIntent.putExtra("StudioKeyDate", film.getDate_sortie());
+
+        myIntent.putExtra("StudioKeyAnne", film.getDate_sortie());
+        myIntent.putExtra("StudioKeyDesc", film.getDescription());
 
         MainActivity.this.startActivity(myIntent);
 
