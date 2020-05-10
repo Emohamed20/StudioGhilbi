@@ -28,11 +28,13 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 * Gitflow propre
 
 # Fonctionnalités:
-## premier Ecran 
+## Premier Ecran 
+* Afficher la liste des films de studio ghilbi
 
 ![](Image_readme/Ecran_d'accueil_Application.PNG)
 
-## deuxième Ecran 
+## Deuxième Ecran 
+* afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
 
 ![](Image_readme/detail_film1.PNG)
 ![](Image_readme/detail_film2.PNG)
