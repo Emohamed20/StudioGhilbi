@@ -9,10 +9,8 @@ L'application StudioGhilbi traite des données reçues au format JSON récupér�
 de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux données de tous les films réalisés par le grand studio des films d'animation japonais Studio-Ghilbi. les détails de chaque film, comme l'année de sortie de film, le nom de réalisateur et producteur, ainsi que la note de critique de chaque film.
 
 
-![](Image_readme/lego.PNG)
-<p align="center">![](Image_readme/lego.PNG)<br><i><legend>Logo de l'application</legend></i></p>
+<p align="center"><img src="Image_readme/lego.PNG"><br><i><legend>Logo de l'application</legend></i></p>
 
-lego de l'application
 
 
 # Outils et technologies de développement
