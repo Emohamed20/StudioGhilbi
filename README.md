@@ -28,10 +28,11 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 * Gitflow propre
 
 # Fonctionnalités:
+## premier Ecran 
 
-##premier Ecran 
 ![](Image_readme/Ecran_d'accueil_Application.PNG)
 
-##deuxième Ecran 
+## deuxième Ecran 
+
 ![](Image_readme/detail_film1.PNG)
 ![](Image_readme/detail_film2.PNG)
