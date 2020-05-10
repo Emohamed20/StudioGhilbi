@@ -10,6 +10,8 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 
 
 ![](Image_readme/lego.PNG)
+<p align="center">![](Image_readme/lego.PNG)<br><i><legend>Logo de l'application</legend></i></p>
+
 lego de l'application
 
 
@@ -36,7 +38,7 @@ lego de l'application
 ## Premier Ecran 
 * Afficher la liste des films de studio ghilbi
 
-![](Image_readme/Ecran_d'accueil_Application.PNG){:height="50%" width="50%"}
+![](Image_readme/Ecran_d'accueil_Application.PNG) <element height="50%" width="50%">
 
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
