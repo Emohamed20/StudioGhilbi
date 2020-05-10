@@ -69,7 +69,7 @@ public class ListAdapteur extends RecyclerView.Adapter<ListAdapteur.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final Film currentStudio = values.get(position);
         holder.txtHeader.setText(currentStudio.getTitre());//ce qui appel le titre
-        holder.txtFooter.setText("Titre: " + currentStudio);//ce qui appelle la deuxieme ligne
+        holder.txtFooter.setText("Film d'animation ");//ce qui appelle la deuxieme ligne
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
