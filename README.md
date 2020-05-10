@@ -9,7 +9,8 @@ L'application StudioGhilbi traite des données reçues au format JSON récupér�
 de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux données de tous les films réalisés par le grand studio des films d'animation japonais Studio-Ghilbi. les détails de chaque film, comme l'année de sortie de film, le nom de réalisateur et producteur, ainsi que la note de critique de chaque film.
 
 
-![](Image_readme/lego.PNG)
+![](Image_readme/lego.PNG/200/200)
+lego application
 
 
 # Outils et technologies de développement
@@ -17,7 +18,9 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 * Android Studio est un environnement de développement pour développer des applications mobiles Android.
 
 
-* Retrofit2 est une librairie permettant de réaliser des appels à des webservices REST sur Android.
+* Retrofit2 est une librairie permettant de réaliser des appels à des webservices REST sur Android
+
+* SharedPreferences sont des espaces de stockages propres à chaque application Android. Avec un système de clé/valeur, vous pourrez persister vos données facilement
 
 # Consignes respectées :
 * Architecture MVC
@@ -36,5 +39,5 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
 
-![](Image_readme/detail_film1.PNG)
-![](Image_readme/detail_film2.PNG)
+![](Image_readme/detail_film1.PNG/200/400)
+![](Image_readme/detail_film2.PNG/200/50)
