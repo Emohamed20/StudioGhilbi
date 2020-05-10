@@ -17,6 +17,7 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 
 * Android Studio est un environnement de développement pour développer des applications mobiles Android.
 ![](Image_readme/android_studio_lego.png)
+<p align="center"><img src="Image_readme/android_studio_lego.png"><br></p>
 
 * Retrofit2 est une librairie permettant de réaliser des appels à des webservices REST sur 
 ![](Image_readme/retrofit_lego.jpg)
