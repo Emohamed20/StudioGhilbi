@@ -19,10 +19,10 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 <p align="center"><img src="Image_readme/android_studio_lego.png"><br></p>
 
 * Retrofit2 est une librairie permettant de réaliser des appels à des webservices REST sur 
-<p align="center"><img src="Image_readme/retrofit_lego.jpg" width="16%"></p>
+<p align="center"><img src="Image_readme/retrofit_lego.jpg" width="40%"></p>
 
 * SharedPreferences sont des espaces de stockages propres à chaque application Android. Avec un système de clé/valeur, vous pourrez persister vos données facilement
-<p align="center"><img src="Image_readme/sharedprefs.png" width="16%"></p>
+<p align="center"><img src="Image_readme/sharedprefs.png" width="40%"></p>
 
 # Consignes respectées :
 * Architecture MVC
@@ -36,7 +36,7 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 ## Premier Ecran 
 * Afficher la liste des films de studio ghilbi
 
-![](Image_readme/Ecran_d'accueil_Application.PNG) <element height="50%" width="50%">
+<p><img src="Image_readme/Ecran_d'accueil_Application.PNG" width="60%"></p>
 
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
