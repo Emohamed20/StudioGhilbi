@@ -36,7 +36,7 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 ## Premier Ecran 
 * Afficher la liste des films de studio ghilbi
 
-<p><img src="Image_readme/Ecran_d'accueil_Application.PNG" width="40%" height="50%"></p>
+<p><img src="Image_readme/Ecran_d'accueil_Application.PNG" width="35%" height="40%"></p>
 
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
