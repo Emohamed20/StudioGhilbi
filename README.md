@@ -40,5 +40,5 @@ de [ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com/) relative aux donn
 
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
-
-<p><img src="Image_readme/detail_film1.PNG" width="35%" height="40%", src="Image_readme/detail_film2.PNG" width="35%" height="40%"></p>
+<p><img src="Image_readme/detail_film1.PNG" width="35%" height="40%">
+   <img src="Image_readme/detail_film2.PNG" width="35%" height="40%"></p>
