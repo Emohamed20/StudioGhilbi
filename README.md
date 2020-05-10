@@ -36,7 +36,7 @@ lego de l'application
 ## Premier Ecran 
 * Afficher la liste des films de studio ghilbi
 
-![](Image_readme/Ecran_d'accueil_Application.PNG)
+![](Image_readme/Ecran_d'accueil_Application.PNG){:height="50%" width="50%"}
 
 ## Deuxième Ecran 
 * afficher les details de chaque film(Titre, Année, Producteur, Réalisateur, Note de film...) 
